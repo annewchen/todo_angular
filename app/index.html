@@ -21,26 +21,26 @@
 
       <ul>
         <!-- built-in directive repeat -->
-        <li ng-repeat="item in items | orderBy: 'status'" ng-dblclick="editMode()">
+        <li ng-repeat="item in items | orderBy: 'status'">
 
           <!-- directive model that changes the status by adding css classes -->
           <input type="checkbox" ng-model="item.status">
           <!-- class naming here for easy css on status false vs. true -->
+          <!-- expression for the view display -->
           <span class="status_{{item.status}}">{{ item.chore }}</span>
-<!--           <input class="edit" type="text" ng-model="item.chore"
-              ng-keyup="editOnEnter(item)"/> -->
-          <!-- directive for deleting -->
-          <i class="fa fa-times delete" ng-click="deleteChore(item)">
+          <!-- directive for deleting on click-->
+          <!-- add bootstrap for icon -->
+          <i class="fa fa-times" ng-click="deleteChore(item)">
             <a></a>
           </i>
-
 
         </li>
       </ul>
 
       <form class="center">
         <input type="text" placeholder="Enter a Chore" ng-model="newChore">
-        <button class="add btn" ng-click="addChore()">Add</button>
+        <button ng-click="addChore()">Add</button>
+        <button ng-click="clear()">Clear checked</button>
       </form>
 
 

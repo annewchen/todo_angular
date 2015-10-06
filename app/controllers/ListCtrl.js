@@ -14,13 +14,11 @@ app.controller('ListCtrl', ['$scope', function($scope){
     var index = $scope.items.indexOf(item)
     $scope.items.splice(index, 1);
   };
-
-  $scope.editMode = function(){
-      $(event.target).closest('li').toggleClass('editing');
-  };
-/*  $scope.editOnEnter = function(item){
-      if(event.keyCode == 13 && item.chore){
-          $scope.editMode();
-      }
-  };*/
+  $scope.clear = function(){
+    var oldItems = $scope.items;
+    $scope.items = [];
+    angular.forEach(oldItems, function(item){
+        if (!item.status) $scope.items.push(item)
+      });
+    };
 }]);
