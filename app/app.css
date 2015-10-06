@@ -2,14 +2,6 @@ body{
   background-color: #9599B1;
 }
 
-h1{
-  text-align: center;
-  font-family: "Stardos Stencil";
-}
-
-h2{
-  font-family: "Stardos Stencil";
-}
 
 div{
   margin-left: 33%;
@@ -22,6 +14,12 @@ ul{
   border-radius: 5px
 }
 
+.font{
+  font-family: "Stardos Stencil";
+}
+.center{
+  text-align: center;
+}
 .status_true{
   color: green;
   text-decoration: line-through;
