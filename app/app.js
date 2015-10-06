@@ -1,12 +1,16 @@
-'use strict';
+var app = angular.module('ListApp', []);
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+app.controller('ListCtrl', ['$scope', function($scope){
+  $scope.items= [
+  /*{chore: "wash the dog", status: false},
+  {chore: "mow the lawn", status: false},*/
+  ];
+
+  $scope.addChore = function(){
+    $scope.items.push(
+      {chore: $scope.newChore, status: false}
+    );
+    $scope.newChore=""
+  };
+
 }]);
