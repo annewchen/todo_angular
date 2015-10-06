@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="app.css">
   <link href='https://fonts.googleapis.com/css?family=Stardos+Stencil|Khula' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
 </head>
@@ -15,24 +16,39 @@
   <h1 class="center font">To Do List </h1>
     <div ng-controller="ListCtrl">
 
+      <!-- Counts the amount of items by filtering by statuses -->
       <h2 class="font">You have {{ (items | filter: {status:false}).length }} chore(s) left to do!</h2>
 
       <ul>
-        <li ng-repeat="item in items | orderBy: 'status'">
+        <!-- built-in directive repeat -->
+        <li ng-repeat="item in items | orderBy: 'status'" ng-dblclick="editMode()">
+
+          <!-- directive model that changes the status by adding css classes -->
           <input type="checkbox" ng-model="item.status">
-          <span class="status_{{item.status}}"> {{ item.chore }} </span>
+          <!-- class naming here for easy css on status false vs. true -->
+          <span class="status_{{item.status}}">{{ item.chore }}</span>
+<!--           <input class="edit" type="text" ng-model="item.chore"
+              ng-keyup="editOnEnter(item)"/> -->
+          <!-- directive for deleting -->
+          <i class="fa fa-times delete" ng-click="deleteChore(item)">
+            <a></a>
+          </i>
+
+
         </li>
       </ul>
 
       <form class="center">
         <input type="text" placeholder="Enter a Chore" ng-model="newChore">
-        <button ng-click="addChore()">Add</button>
+        <button class="add btn" ng-click="addChore()">Add</button>
       </form>
 
 
     </div>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="app.js"></script>
+  <script src="controllers/ListCtrl.js"></script>
 
 </body>
 </html>
