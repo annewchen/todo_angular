@@ -29,3 +29,12 @@ You can open the index.html file in your browser. You can also run it in a simpl
 After starting the server, you can visit the following link to view the application: <a href="http://localhost:8000/app/">localhost:8000/app</a>
 </p>
 
+## Resources for learning Angular
+<ul>
+
+<li><a href="https://www.codecademy.com/en/courses/learn-angularjs">Codecademy Angular Tutorial</a></li>
+<li><a href="https://www.codeschool.com/courses/shaping-up-with-angular-js">CodeSchool Angular Tutorial</a></li>
+<li><a href="http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html">ng-newsletter: How to Get Started</a></li>
+<li><a href="https://docs.angularjs.org/guide">AngularJS Developer Guide</a></li>
+<li><a href="http://tutorialzine.com/2013/08/learn-angularjs-5-examples/">Tutorial Zine: 5 basic Angular examples</a></li>
+</ul>
