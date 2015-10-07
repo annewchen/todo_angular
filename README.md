@@ -18,7 +18,7 @@
 <p>In order to get this ToDo List up and running on your local computer, you will need to have the following installed:
   <ul>
    <li><a href="http://git-scm.com/">git</a></li>
-   <li><a href="https://nodejs.org/en/">*Optional: node.js</a> and its project manager: <a href="https://www.npmjs.com/">npm</a> (Needed if you would like to run this app with a simpe development web server</li>
+   <li>*Optional: <a href="https://nodejs.org/en/">node.js</a> and its project manager: <a href="https://www.npmjs.com/">npm</a> (Needed if you would like to run this app with a simpe development web server</li>
   </ul>
 </p>
 <p>
