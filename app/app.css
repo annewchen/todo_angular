@@ -2,7 +2,6 @@ body{
   background-color: #9599B1;
 }
 
-
 div{
   margin-left: 33%;
   margin-right: 30%;
@@ -14,17 +13,21 @@ ul{
   border-radius: 5px
 }
 
+.delete{
+  float: right;
+  margin-right: 1em;
+}
 .font{
   font-family: "Stardos Stencil";
 }
 .center{
   text-align: center;
 }
+
 .status_true{
-  color: green;
+  color: #11471E;
   text-decoration: line-through;
 }
-
 .status_false{
-  color: red;
+  color: #841319;
 }
